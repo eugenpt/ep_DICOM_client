@@ -43,7 +43,7 @@ class ep_DICOM_Client:
         Simple implementation of DICOM Client for home use
         (wrapper around pynetdicom functions)
     """
-    dataset_save_filter_fun = lambda _:True  
+    dataset_save_filter_fun = lambda self,D : True  
     # sample filter fun:
     # dataset_save_filter_fun = lambda D:(('brain'  in str(D.SeriesDescription).lower())or('bone' in str(D.SeriesDescription).lower()))
     
