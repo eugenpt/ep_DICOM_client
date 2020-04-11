@@ -1,10 +1,10 @@
-* ep_DICOM_client *
+# ep_DICOM_client #
 
 provides basic DICOM C_FIND/C_STORE wrappers around pynetdicom functions
 
 for example use change EDC init parameters in ep_DICOM_client.py and run it
 
-Or do smt like this:
+Or do sth like this:
 ~~~~
 
 from ep_DICOM_Client import ep_DICOM_Client
@@ -25,8 +25,8 @@ PatientID = "SAMPLE_ID"
 Studies = EDC.getStudyInstanceIdentiers(PatientID)
 
 print('For %s found studies on the following dates:' % PatientID)
-for Sj in range(len(Studies)):
-    print('%i\t%s\tdate:%s' % (Sj+1,Studies[Sj].PatientID,Studies[Sj].StudyDate))
+for S in Studies:
+    print('date:%s' % S.StudyDate)
 
                   
 ~~~~                      
